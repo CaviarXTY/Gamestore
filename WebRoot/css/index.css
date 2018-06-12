@@ -1,0 +1,607 @@
+.fixed-bottom {
+	position: fixed;
+	bottom: 0;
+	width:100%;
+}
+.navlist{
+	background-color: #000;
+	height: 70px;
+}
+
+.toolbar{
+	display: block;
+	height: 70px;
+	line-height: 70px;
+	float: right;
+}
+
+.toolbar .btn{
+	line-height: 24px;
+    background: transparent;
+    min-width: 100px;
+    padding: 0 15px;
+    font-size: 12px;
+    color: #5d5d5d;
+}
+
+.btn a {
+	font-size: 12px;
+	display:block;
+    height: 70px;
+    line-height: 70px;
+    float: left;
+    margin-right: 10px;
+}
+.btn a:link,a:visited{
+	font-size: 12px;
+	color: #5d5d5d;
+	display:block;
+	text-decoration:none;
+}
+.btn a:hover{
+	font-size: 12px;
+	color: #fff;
+	text-decoration:none;
+}
+.btn a:active{
+	font-size: 12px;
+	color: #5d5d5d;
+	display:block;
+	text-decoration:none;
+}
+
+header{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    margin: 0;
+    background-color: hsla(0,0%,100%,.95);
+    box-shadow: 0 4px 8px -3px rgba(0,0,0,.1), 0 5px 10px -5px rgba(0,0,0,.1);
+    transition: background .2s linear;
+}
+.fr-header{
+    margin: 0 auto;
+    width: 1000px;
+    height: 42px;
+    background: transparent;
+    line-height: 42px;
+    /*padding:0;*/
+
+}
+.home-nav {
+    margin: 0px auto;
+    height: 42px;
+    line-height: 42px;
+    background: #fff;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    padding: 0;
+}
+.tui-nav {
+    width: 40%;
+    float: left;
+    font-size: 14px;
+}
+
+.tui-nav ul{
+	list-style-type:none;
+}
+
+.tui-nav li {
+    position: relative;
+    float: left;
+    margin-right: 50px;
+}
+
+.tui-nav a {
+	font-size: 14px;
+	display:block;
+    height: 42px;
+    line-height: 42px;
+    color: black;
+}
+
+.tui-nav a:link,a:visited{
+	font-size: 14px;
+	color: black;
+	display:block;
+	text-decoration:none;
+}
+.tui-nav a:hover{
+	color: black;
+	font-size: 14px;
+	text-decoration:none;
+}
+.tui-nav a:active{
+	font-size: 14px;
+	color: black;
+	display:block;
+	text-decoration:none;
+}
+
+.tui-nav .cur{
+	color: black;
+	text-decoration:none;
+	border-bottom:3px solid #f69c00;
+}
+.tui-nav .cur a:hover{
+	font-size: 14px;
+	color: black;
+	display:block;
+	text-decoration:none;
+}
+
+.turn-r{
+    width: 520px;
+    right: 0;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    float: right;
+    display: block;
+}
+
+.turn-r{
+    width: 520px;
+    right: 0;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    float: right;
+    display: block;
+}
+
+.turn-r .tui-search{
+	float: right;
+	display: block;
+}
+
+.turn-r .hot-search{
+	float: left;
+	display: block;
+}
+
+.hot-search a {
+	font-size: 14px;
+	display:block;
+    height: 42px;
+    line-height: 42px;
+    float: left;
+    margin-right: 10px;
+}
+.hot-search a:link,a:visited{
+	font-size: 14px;
+	color: #b2b2b2;
+	display:block;
+	text-decoration:none;
+}
+.hot-search a:hover{
+	font-size: 14px;
+	color: #f69c00;
+	text-decoration:none;
+}
+.hot-searcha a:active{
+	font-size: 14px;
+	color: #b2b2b2;
+	display:block;
+	text-decoration:none;
+}
+
+.tui-search form {
+  position: relative;
+  width: 250px;
+  margin: 0 auto;
+}
+.d5 {
+	background: transparent;
+}
+.d5 input, .d5 button {
+  outline: none;
+  background: transparent;
+}
+.d5 input {
+  width: 100%;
+  height: 35px;
+  padding-left: 15px;
+  border: 1px solid #b2b2b2;
+}
+.d5 button {
+  border: none;
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.d5 button:before {
+  content: "\f002";
+  font-family: FontAwesome;
+  font-size: 16px;
+  color: #b2b2b2;
+}
+.d5 input:focus {
+  border-color: #f69c00;
+}
+
+.store-bg{
+	background:#eee url(../image/background.jpg) no-repeat 50% 0!important;
+}
+
+section{
+	margin: 0 auto;
+ 	width: 100%;
+ 	display:inline;
+}
+
+.div-ad{
+	margin: 150px auto;
+	width: 1000px;
+	margin-bottom: 10px;
+}
+
+.hot-recommendation{
+	margin: 0px auto;
+	width: 1000px;
+}
+
+.hot-recommendation .title{
+    font-size: 20px;
+    line-height: 27px;
+    color: #333;
+    display: inline-block;
+}
+
+.hot-recommendation .subtit{
+    margin: 0 10px;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: left;
+    color: #858585;
+    display: inline-block;
+    position: relative;
+}
+
+.subtit:after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    display: inline-block;
+    border: 2px solid #ffc548;
+    border-top: 0;
+    border-left: 0;
+    margin-left: 5px;
+    position: absolute;
+    right: -14px;
+    bottom: -5px;
+}
+
+.hot-game{
+	margin: 0 auto;
+	margin-top: 15px;
+	width: 1000px;	
+	overflow: auto;
+}
+
+/*以下是热门推荐css*/
+.game-box{
+ 	width:800px; 
+ 	height:100%;
+  	float: left;
+ }
+.gamelist{
+ 	width:700px;
+ 	height:101px;
+  	margin-left: 0px; 
+ 	background-color:#FFF; 
+ 	margin-top: 3px;
+ 	margin-bottom: 3px;
+ 	border-radius:5px;
+ 	cursor:pointer;
+ }
+.gameImage img{
+	float:left; 
+	border-radius:5px; 
+	margin-right: 15px;
+	width:180px;
+	height:101px;
+}
+.gameword{
+ 	float:left;
+}
+
+.gameword h3{
+    display: block;
+    font-size: 15px;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.gameword .uptime{
+	margin-top: 0px;
+	padding-top: 0px;
+	font-size: 12px;
+    color: #858585;
+}
+
+.game-label{
+    margin-top: 7px;
+    overflow: hidden;
+    width: 280px;
+    font-size: 12px;
+}
+
+.game-label a{
+	font-size: 12px;
+	display: block;
+    height: 18px;
+    line-height: 16px;
+    color: #858585;
+    line-height: 22px;
+    height: 22px;
+    border: 1px solid #d8d8d8;
+    color: #3c3c3c;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    padding: 0 5px;
+    border-radius: 2px;
+    font-size: 12px;
+    margin: 0 4px 0 0;
+    transition: all .2s linear;
+    overflow: hidden;
+    vertical-align: top;
+    text-decoration: none;
+}
+.game-label a:link,a:visited,a:hover,a:active{
+	font-size: 12px;
+	color: #858585;
+    text-decoration: none;
+}
+
+.gameword h4{
+	margin-top:15px;
+	margin-left:20px;
+	color:#333;
+}
+.gameword h5{
+	margin-top:15px;
+	margin-left:20px;
+	color:#999; 
+	font-weight:normal;
+}
+.gameprice{ 
+	float:right;
+}
+.gameprice h5{
+	margin-top:40px;
+	margin-right: 20px;
+	position:relative;  
+	color:#999;
+	text-align: right;
+	font-weight:normal; 
+}
+
+.viewmore {
+	margin: 0 auto;
+	width:800px; 
+ 	height:100%;
+  	float: left;
+    display: block;
+    height: 38px;
+    line-height: 38px;
+    background-color: rgba(0, 0, 0, 0.05);
+    text-align: center;
+    color: rgb(51, 51, 51);
+    border-radius: 4px;
+}
+
+
+
+/*页脚*/
+footer{
+	margin-top: 20px;
+	padding-top: 20px;
+	margin: 0 auto;
+	overflow: auto;
+    width: 100%;
+    background: #000;
+}
+
+.copyright{
+	margin:0 auto;
+	width: 1000px;
+}
+
+.placeholder{
+	margin: 0 auto;
+	width:100%; 
+ 	height:100%;
+  	float: left;
+    display: block;
+    height: 25px;
+    line-height: 25px;
+}
+
+.copyright p{
+	color: #5d5d5d;
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 24px;
+}
+
+/*弹出登陆窗口css*/
+.ui-dialog{
+	width: 380px;
+	height: auto;
+	display: none; 
+	position: absolute;
+	z-index: 9000; 
+	top: 0px;
+	left: 0px; 
+	background: #fff;
+	box-shadow:0 0 10px 0 rgba(0,0,0,0.3);
+}
+.ui-dialog a{
+	text-decoration: none;
+}
+.ui-dialog-title{
+	padding:0px 20px;
+	color: #fff;
+	font-size: 16px; 
+	border-bottom: 1px solid #fff;
+	background: #5DC3A7; 
+	user-select:none; 
+}
+
+.ui-dialog-title span{
+	display: block;
+	background:#5DC3A7;
+	padding-top:10px;
+	padding-bottom: 10px;
+	padding-left: 2px;
+	padding-right: 2px;
+	color:#fff;
+	border-radius:3px;
+}
+
+.ui-dialog-closebutton{
+	float: right;
+	color: #fff;
+	font-size: 15px;
+	text-decoration: none;
+	outline: 0;
+}
+.ui-dialog-closebutton:hover{
+	outline: 0;
+	font-size: 15px;
+	text-decoration: none;
+	color: #000;
+}
+
+.ui-dialog-content{
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-bottom: 30px;
+}
+.ui-dialog-pt15{
+	padding-top: 15px; 
+}
+.ui-dialog-l40{
+	height: 40px;
+	line-height: 40px; 
+	text-align: right; 
+	margin-top: 15px;
+}
+
+.ui-dialog-l40 :link{
+	text-decoration: none;
+	color: #5DC3A7;
+	font-size: 14px;
+}
+.ui-dialog-l40 :visited {
+	text-decoration: none;
+	color: #5DC3A7;
+	font-size: 14px;
+}
+.ui-dialog-l40 :hover{
+	text-decoration: none;
+	color: #23AA84;
+	font-size: 14px;
+}
+.ui-dialog-l40 :active{
+	text-decoration: none;
+	color: #5DC3A7;
+	font-size: 14px;
+}
+
+.ui-dialog-input{
+	width: 100%;
+	height: 40px; 
+	margin: 0px;
+	padding:0px; 
+	border: 1px solid #d5d5d5; 
+	color: #000; 
+	text-indent: 30px; 
+	outline: none; 
+}
+
+.ui-dialog-input:focus{
+	border:2px solid #5DC3A7;
+ 	outline:0;
+}
+
+.ui-dialog-input-username{
+	background: url(../image/loginwindow/input_username.png) no-repeat 2px ; 
+}
+.ui-dialog-input-password{
+	background: url(../image/loginwindow/input_password.png) no-repeat 2px ; 
+}
+.ui-dialog-input-email{
+	background: url(../image/loginwindow/input_email.png) no-repeat 2px ; 
+}
+.ui-dialog-submit{
+	color: white;
+	width: 100%;
+	height: 50px;
+	background: #5DC3A7;
+	border:none;
+	font-size: 16px;
+	color: #fff; 
+	outline: none;
+	text-decoration: none; 
+	display: block;
+	text-align: center;
+	line-height: 50px; 
+	margin-top: 30px;
+}
+
+.ui-dialog-submit a{
+	display: block;
+	width: 100%;
+	height: 50px;
+}
+
+.ui-dialog-submit :link{
+	font-size: 16px;
+	color: #fff;
+}
+.ui-dialog-submit :visited{
+	font-size: 16px;
+	color: #fff;
+}
+.ui-dialog-submit :hover{
+	color: #fff;
+	text-decoration: none;
+	font-size: 16px;
+	background: #23AA84; 
+}
+.ui-dialog-submit :active{
+	font-size: 16px;
+	color: #fff;
+}
+
+.ui-mask{
+	width: 100%;
+	height:100%;
+	background: #000; 
+	position: absolute;
+	top: 0px;
+	height: 0px;
+	z-index: 8000; 
+	opacity:0.4; 
+	filter: Alpha(opacity=40); 
+}

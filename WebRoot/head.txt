@@ -1,0 +1,222 @@
+		<%@page contentType="text/html;charset=gb2312"%>
+		
+	    <script type="text/javascript">
+	      $(function(){
+	          function footerPosition(){
+	              $("footer").removeClass("fixed-bottom");
+	              var contentHeight = document.body.scrollHeight,//网页正文全文高度
+	                  winHeight = window.innerHeight;//可视窗口高度，不包括浏览器顶部工具栏
+	              if(!(contentHeight > winHeight)){
+	                  //当网页正文高度小于可视窗口高度时，为footer添加类fixed-bottom
+	                  $("footer").addClass("fixed-bottom");
+	              } else {
+	                  $("footer").removeClass("fixed-bottom");
+	              }
+	          }
+	          footerPosition();
+	          $(window).resize(footerPosition);
+	      });
+	    </script>
+    
+		<!-- 弹出登陆窗口 -->
+		<div class="ui-mask" id="mask" onselectstart="return false"></div>
+		<div class="ui-dialog" id="dialogMove" onselectstart='return false;'>
+			<div class="ui-dialog-title" id="dialogDrag"
+				onselectstart="return false;">
+				<span> 登录通行证 <a class="ui-dialog-closebutton"
+					href="javascript:hideDialog();">×</a> </span>
+			</div>
+			<div class="ui-dialog-content">
+				<form action="login" id="login_form" Method="post">
+					<div class="ui-dialog-l40 ui-dialog-pt15">
+						<input name="id" class="ui-dialog-input ui-dialog-input-username"
+							type="input" placeholder="用户名" value="" />
+					</div>
+					<div class="ui-dialog-l40 ui-dialog-pt15">
+						<input name="pw" class="ui-dialog-input ui-dialog-input-password"
+							type="password" placeholder="密码" value="" />
+					</div>
+					<div class="ui-dialog-submit">
+						<a href="javascript:document:login_form.submit();">登录</a>
+					</div>
+					<div class="ui-dialog-l40">
+						<a href="javascript:showDialog2();">立即注册</a>
+					</div>
+				</form>
+			</div>
+		</div>
+
+
+		<!-- 弹出注册窗口 -->
+		<div class="ui-mask" id="mask2" onselectstart="return false"></div>
+		<div class="ui-dialog" id="dialogMove2" onselectstart='return false;'>
+			<div class="ui-dialog-title" id="dialogDrag2"
+				onselectstart="return false;">
+				<span> 注册通行证 <a class="ui-dialog-closebutton"
+					href="javascript:hideDialog2();">×</a> </span>
+			</div>
+			<div class="ui-dialog-content">
+				<form action="register" id="register_form" Method="post">
+					<div class="ui-dialog-l40 ui-dialog-pt15">
+						<input name="id" class="ui-dialog-input ui-dialog-input-username"
+							type="input" placeholder="用户名" value="" />
+					</div>
+					<div class="ui-dialog-l40 ui-dialog-pt15">
+						<input name="pwd" class="ui-dialog-input ui-dialog-input-password"
+							type="password" placeholder="密码" value="" />
+					</div>
+					<div class="ui-dialog-l40 ui-dialog-pt15">
+						<input name="pwd2"
+							class="ui-dialog-input ui-dialog-input-password" type="password"
+							placeholder="确认密码" value="" />
+					</div>
+					<div class="ui-dialog-l40 ui-dialog-pt15">
+						<input name="em" class="ui-dialog-input ui-dialog-input-email"
+							type="input" placeholder="邮箱" value="" />
+					</div>
+					<div class="ui-dialog-submit">
+						<a href="javascript:document:register_form.submit();">立即注册</a>
+					</div>
+				</form>
+			</div>
+		</div>
+
+
+		<div>
+			<header>
+			<!-- logo栏 -->
+			<div class="container-fluid navlist">
+				<!-- 左对齐logo -->
+				<div class="navbar-header">
+					<a href="home.jsp" class="navbar-brand"><img src="./image/logo2.jpg">
+					</a>
+				</div>
+				<div class="toolbar">
+					<div class="btn">
+
+						<%
+							if (Login.getLogin_case() == true) {
+						%>
+						
+						<!-- 用户超链接 》》》 User_Servlet》》》user.jsp-->
+						<td><form action="user" id="user_form" method=post>
+							<input name="id" type="hidden" value="<%=Login.getLogin_name()%>" />
+						</form>
+						<td><form action="close" id="close_form" method=post>
+						    <input name="id" type="hidden" value="<%=Login.getLogin_name()%>" />
+						</form>
+						
+						<a href="javascript:document:user_form.submit();"> 欢迎回来，<%=Login.getLogin_name()%></a>
+						<a href="javascript:document:close_form.submit();">注销</a>
+						<%
+							} else {
+						%>
+						
+						<a href="javascript:showDialog();">登录</a>
+						<a href="javascript:showDialog2();">注册</a>
+
+						<%
+							}
+						%>
+
+
+					</div>
+				</div>
+			</div>
+			<!-- nav导航栏 -->
+			<div class="fr-header">
+				<div class="home-nav">
+					<!-- 左对齐 -->
+					<nav class="tui-nav">
+					<ul class="main-nav">
+				
+						
+						
+						<%
+						if(jsp=="list"){//list
+						%>
+						
+						<li>
+							<a href="home.jsp">精选</a>
+						</li>
+						<!-- 商店按钮》》》Serch_Servlet》》》list.jsp-->
+						<li class="cur">
+						    <form action=search id="store_from" method=post>
+								<input type=hidden name='keywords' value='' />
+								<input type=hidden name='type' value='0' />
+								<a href="javascript:document:store_from.submit();">所有游戏</a>
+							</form>
+
+						</li>
+						
+						<%
+						}else if(jsp=="game"){//game
+						%>	
+											
+						<li class="cur"><a>游戏详情</a></li>
+						
+						<%
+						}else if(jsp=="user"){//user
+						%>
+						
+						<li class="cur"><a>个人中心</a></li>
+						
+						<%
+						}else{//home
+					    %>
+					    
+						<li class="cur">
+							<a href="home.jsp">精选</a>
+						</li>
+						<!-- 商店按钮》》》Serch_Servlet》》》list.jsp-->
+						<li>
+						    <form action=search id="store_from" method=post>
+								<input type=hidden name='keywords' value='' />
+								<input type=hidden name='type' value='0' />
+								<a href="javascript:document:store_from.submit();">所有游戏</a>
+							</form>
+
+						</li>
+						
+						<%
+						}
+						%>
+
+					</ul>
+					</nav>
+					<!-- 右对齐 -->
+					<div class="turn-r">
+						<!-- 左对齐 -->
+						<div class="hot-search">
+							<!-- 标签栏 -->
+							<table>
+								<%
+									String[] typename = { "动作", "冒险", "模拟", "角色扮演", "休闲", "热门" };
+									String[] typeid = { "01", "02", "03", "04", "05", "06" };
+									for (int i = 0; i < 6; i++) {
+								%>
+								<tr>
+									<form action="search" id="g<%=i%>" Method='post'>
+										<input type=hidden name="keywords" value="<%=typeid[i]%>" />
+										<input type=hidden name="type" value="1" />
+										<a href="javascript:document:g<%=i%>.submit();"><%=typename[i]%></a>
+									</form>
+								</tr>
+								<%
+									}
+								%>
+							</table>
+						</div>
+						&nbsp;
+						<!-- 搜索框 -->
+						<div class="tui-search d5">
+							<form action=search id="serch_from" method=post>
+								<input type=hidden name="type" value="2" />
+								<input type="text" name="keywords" placeholder="搜索游戏或标签...">
+								<button type="submit"></button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			</header>
